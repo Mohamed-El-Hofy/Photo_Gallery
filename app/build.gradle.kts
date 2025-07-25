@@ -17,8 +17,7 @@ android {
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
-        val peelsApiKey = project.properties["PEXELS_API_KEY"]?.toString() ?: "" // Get property
-        buildConfigField("String", "PEXELS_API_KEY", "\"${peelsApiKey}\"") // Use it
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
