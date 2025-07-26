@@ -5,6 +5,8 @@ plugins {
     id ("com.google.dagger.hilt.android")
     id ("kotlin-kapt")
     id("com.google.devtools.ksp")
+    id("kotlin-parcelize")
+    id("androidx.room")
 }
 
 android {
@@ -20,7 +22,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    room {
+        schemaDirectory("$projectDir/schemas")
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -39,6 +43,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
 
 }
@@ -54,9 +59,10 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    // Retrofit + Gson
+    // Retrofit + Gson + logging interceptor
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
+    implementation(libs.logging.interceptor)
 
 // Coroutines
     implementation (libs.kotlinx.coroutines.core)
@@ -78,5 +84,8 @@ dependencies {
 // Lifecycle + ViewModel
     implementation (libs.androidx.lifecycle.viewmodel.ktx)
     implementation (libs.androidx.lifecycle.livedata.ktx)
+
+    implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.fragment.ktx)
 
 }

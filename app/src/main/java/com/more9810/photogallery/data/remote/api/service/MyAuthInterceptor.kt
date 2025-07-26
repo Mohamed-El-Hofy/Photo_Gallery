@@ -1,4 +1,4 @@
-package com.more9810.photogallery.data.api
+package com.more9810.photogallery.data.remote.api.service
 
 import com.more9810.photogallery.common.Const
 import okhttp3.Interceptor
