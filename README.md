@@ -68,8 +68,7 @@ The app supports **offline caching** with Room Database, **Light/Dark theme swit
 
 ## **Video Demo**
 
-[![Watch the video](./screenshots/online_dark.jpg)]([https://www.youtube.com/watch?v=YOUR_VIDEO_ID](https://drive.google.com/file/d/13uGey96eHFaB3vVkZrC5g3sMAXOZYfS7/view?usp=sharing))
-
+![Demo Video](./screenshots/demo_video.gif)
 
 
 
