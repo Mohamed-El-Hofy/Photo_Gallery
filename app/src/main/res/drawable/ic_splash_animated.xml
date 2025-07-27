@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+
+    <group android:name="circleGroup">
+        <path
+
+            android:name="circle"
+            android:fillColor="#2196F3"
+            android:pathData="M100,10 A90,90 0 1,1 99.99,10"
+            android:strokeWidth="0" />
+    </group>
+
+    <!-- النص -->
+    <group android:name="textGroup"
+        android:translateY="140">
+        <path
+            android:name="text"
+            android:fillColor="#FFFFFF"
+            android:pathData="M20,0 L180,0" /> <!-- خط مكان النص -->
+    </group>
+</vector>

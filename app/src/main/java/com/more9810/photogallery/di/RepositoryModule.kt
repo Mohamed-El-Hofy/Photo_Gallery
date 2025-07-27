@@ -5,6 +5,9 @@ import com.more9810.photogallery.data.local.database.dao.PhotoDao
 import com.more9810.photogallery.data.local.systemData.NetworkChecker
 import com.more9810.photogallery.data.remote.api.service.PexelsApiService
 import com.more9810.photogallery.data.repository.PhotoRepositoryImpl
+import com.more9810.photogallery.data.repository.ThemeRepositoryImpl
+import com.more9810.photogallery.domain.repository.PhotosRepository
+import com.more9810.photogallery.domain.repository.ThemeRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,12 +19,13 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object RepositoryModule {
 
+
+
     @Provides
     @Singleton
-    fun provideNetworkChecker(@ApplicationContext context: Context): NetworkChecker {
-        return NetworkChecker(context)
+    fun provideThemRepository(@ApplicationContext context: Context): ThemeRepository {
+        return ThemeRepositoryImpl(context)
     }
-
     @Provides
     @Singleton
     fun provideRepository(
@@ -29,7 +33,7 @@ object RepositoryModule {
         apiService: PexelsApiService,
         networkChecker: NetworkChecker
 
-    ): PhotoRepositoryImpl {
+    ): PhotosRepository {
 
         return PhotoRepositoryImpl(
             dao = dao,
