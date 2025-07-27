@@ -21,34 +21,57 @@ The app supports **offline caching** with Room Database, **Light/Dark theme swit
 ## **Screenshots (Conceptual Descriptions)**
 
 ### **Photo List Screen**
-- **Online - Light Mode**  
-  ![Online Light Mode](./screenshots/online_light.png)
-
-- **Online - Dark Mode**  
-  ![Online Dark Mode](./screenshots/online_dark.png)
-
-- **Offline/Cached - Light Mode**  
-  ![Offline Light Mode](./screenshots/offline_light.png)
-
-- **Offline/Cached - Dark Mode**  
-  ![Offline Dark Mode](./screenshots/offline_dark.png)
+<table>
+  <tr>
+    <td align="center">
+      <img src="./screenshots/online_light.jpg" width="100%" />
+      <br><b>Online - Light Mode</b>
+    </td>
+    <td align="center">
+      <img src="./screenshots/online_dark.jpg" width="100%" />
+      <br><b>Online - Dark Mode</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./screenshots/offline_light.jpg" width="100%" />
+      <br><b>Offline - Light Mode</b>
+    </td>
+    <td align="center">
+      <img src="./screenshots/offline_dark.jpg" width="100%" />
+      <br><b>Offline - Dark Mode</b>
+    </td>
+  </tr>
+</table>
 
 ---
 
 ### **States**
-- **Loading State**  
-  ![Loading State](./screenshots/loading.png)
-
-- **Error State**  
-  ![Error State](./screenshots/error.png)
-
-- **Network Status Indicator**  
-  ![Network Status](./screenshots/network_status.png)
+<table>
+  <tr>
+    <td align="center">
+      <img src="./screenshots/loading.jpg" width="100%" />
+      <br><b>Loading State</b>
+    </td>
+    <td align="center">
+      <img src="./screenshots/error.png" width="100%" />
+      <br><b>Error State</b>
+    </td>
+    <td align="center">
+      <img src="./screenshots/network_status.jpg" width="100%" />
+      <br><b>Network Status</b>
+    </td>
+  </tr>
+</table>
 
 ---
+
 ## **Video Demo**
-- [Watch Demo Video](./screenshots/demo_video.mp4)  
-  *(Replace this with your actual demo video path or upload link)*
+
+[![Watch the video](./screenshots/online_dark.jpg)]([https://www.youtube.com/watch?v=YOUR_VIDEO_ID](https://drive.google.com/file/d/13uGey96eHFaB3vVkZrC5g3sMAXOZYfS7/view?usp=sharing))
+
+
+
 
 ---
 ## **App Architecture**
