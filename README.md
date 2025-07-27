@@ -1,0 +1,126 @@
+# 📸 Photo Gallery App
+
+An Android application built with **Clean Architecture** and **MVVM**, that displays photos from the **Pexels API**.  
+The app supports **offline caching** with Room Database, **Light/Dark theme switching**, and a **network status indicator**.
+
+---
+
+## **Features**
+- **Photo fetching from Pexels API** (Online Mode).
+- **Offline Mode:** Loads cached photos from Room Database when offline.
+- **Light and Dark Themes:** Toggleable using a switch in the toolbar.
+- **Network Status Indicator:** Displays whether the device is online or offline.
+- **Pagination:** Loads photos in pages for smooth scrolling and better performance.
+- **Loading & Error States:** Handles API loading and errors gracefully.
+- **Clean Architecture:** Separated layers (data, domain, presentation) with a Repository Pattern and Use Cases.
+- **Coroutines + Flow:** Asynchronous data handling and reactive UI updates.
+- **Material Design 3 UI** with modern and responsive layouts.
+
+---
+
+## **Screenshots (Conceptual Descriptions)**
+
+### **Photo List Screen**
+- **Online - Light Mode**  
+  ![Online Light Mode](./screenshots/online_light.png)
+
+- **Online - Dark Mode**  
+  ![Online Dark Mode](./screenshots/online_dark.png)
+
+- **Offline/Cached - Light Mode**  
+  ![Offline Light Mode](./screenshots/offline_light.png)
+
+- **Offline/Cached - Dark Mode**  
+  ![Offline Dark Mode](./screenshots/offline_dark.png)
+
+---
+
+### **States**
+- **Loading State**  
+  ![Loading State](./screenshots/loading.png)
+
+- **Error State**  
+  ![Error State](./screenshots/error.png)
+
+- **Network Status Indicator**  
+  ![Network Status](./screenshots/network_status.png)
+
+---
+## **Video Demo**
+- [Watch Demo Video](./screenshots/demo_video.mp4)  
+  *(Replace this with your actual demo video path or upload link)*
+
+---
+## **App Architecture**
+
+The project follows **Clean Architecture** with the following layers:
+
+### **1. Data Layer**
+- Contains Room Database (`DAO`, `Entities`) for local caching.
+- Retrofit API service to fetch data from **Pexels API**.
+- Repository implementation (`PhotoRepositoryImpl`) that decides whether to fetch data from **API** or **Room**.
+
+### **2. Domain Layer**
+- Contains **Models**, **Repository Interfaces**, and **Use Cases**.
+- **Use Cases** (e.g., `GetPhotosUseCase`) handle the business logic and data flow between Repository and ViewModel.
+
+### **3. Presentation Layer**
+- Implements **MVVM pattern** using `ViewModel` + `LiveData/StateFlow`.
+- Uses **Data Binding** for updating UI components.
+- Contains UI elements (`Activities`, `Fragments`, `RecyclerView Adapters`).
+
+### **Data Flow Diagram**
+UI (Fragment/Activity)
+↓
+ViewModel
+↓
+Use Case
+↓
+Repository
+↓ ↓
+Room DB Retrofit (API)
+
+---
+
+## **Tech Stack**
+- **Kotlin**
+- **MVVM Architecture**
+- **Clean Architecture + Use Cases**
+- **Room Database**
+- **Retrofit2 + OkHttp**
+- **Hilt for Dependency Injection**
+- **Coroutines + Flow**
+- **Material Design 3**
+- **Data Binding**
+
+---
+
+## **How to Run the Project**
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/Mohamed-El-Hofy/Photo_Gallery.git
+    ```
+2. **Add your Pexels API Key:**
+   - Open `local.properties`.
+   - Add:
+     ```properties
+     PEXELS_API_KEY=your_api_key
+     ```
+3. **Open the project** in **Android Studio (Arctic Fox or newer)**.
+4. **Sync Gradle** and run the app on an emulator or a physical device.
+
+---
+
+## **Deliverables**
+- Functional **Android project** implementing all the above requirements.
+- **README.md** with:
+  - Screenshots of all states (light/dark, online/offline).
+  - Detailed explanation of the **app architecture**.
+  - Setup and run instructions.
+
+---
+
+
+
+## **Developer**
+- [Mohamed El-Hofy](https://github.com/Mohamed-El-Hofy)
