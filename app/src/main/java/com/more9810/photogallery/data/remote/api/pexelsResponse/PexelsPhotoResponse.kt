@@ -1,11 +1,9 @@
 package com.more9810.photogallery.data.remote.api.pexelsResponse
 
 
-import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
-import kotlinx.parcelize.Parcelize
 
-data class PexelsPhotoResponse<T>(
+data class PexelsPhotoResponse(
     @SerializedName("next_page")
     val nextPage: String? = null,
     @SerializedName("page")
@@ -13,7 +11,7 @@ data class PexelsPhotoResponse<T>(
     @SerializedName("per_page")
     val perPage: Int? = null,
     @SerializedName("photos")
-    val photoDto: List<T?>? = null,
+    val photoDto: List<PhotoDto?>? = null,
     @SerializedName("total_results")
     val totalResults: Int? = null
 )

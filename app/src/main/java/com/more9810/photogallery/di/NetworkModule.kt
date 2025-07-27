@@ -1,12 +1,15 @@
 package com.more9810.photogallery.di
 
+import android.content.Context
 import android.util.Log
 import com.more9810.photogallery.common.Const
+import com.more9810.photogallery.data.local.systemData.NetworkChecker
 import com.more9810.photogallery.data.remote.api.service.MyAuthInterceptor
 import com.more9810.photogallery.data.remote.api.service.PexelsApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -20,6 +23,11 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
+    @Provides
+    @Singleton
+    fun provideNetworkChecker(@ApplicationContext context: Context): NetworkChecker {
+        return NetworkChecker(context)
+    }
     @Singleton
     @Provides
     fun provideAuthInterceptor(): MyAuthInterceptor {

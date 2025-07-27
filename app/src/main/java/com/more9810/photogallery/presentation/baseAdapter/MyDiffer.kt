@@ -6,6 +6,7 @@ class MyDiffer<T>(
     private val oItem: List<T>,
     private val nItem: List<T>,
     private val isSame: (T, T) -> Boolean,
+    private val isSameContent: (T, T) -> Boolean,
 ): DiffUtil.Callback()  {
     override fun getOldListSize() = oItem.size
 
@@ -22,7 +23,7 @@ class MyDiffer<T>(
         oldItemPosition: Int,
         newItemPosition: Int,
     ): Boolean {
-        return isSame(oItem[oldItemPosition],nItem[newItemPosition])
+        return isSameContent(oItem[oldItemPosition],nItem[newItemPosition])
     }
 
 }

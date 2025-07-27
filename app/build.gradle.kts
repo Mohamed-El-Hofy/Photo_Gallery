@@ -55,6 +55,9 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.fragment)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -74,7 +77,8 @@ dependencies {
 
 // Glide
     implementation (libs.glide)
-    ksp (libs.compiler)
+    kapt (libs.compiler)
+
 
 // Room
     implementation(libs.androidx.room.runtime)
@@ -88,4 +92,6 @@ dependencies {
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.fragment.ktx)
 
+    //splash screen api
+    implementation(libs.androidx.core.splashscreen)
 }

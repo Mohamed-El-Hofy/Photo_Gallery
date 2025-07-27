@@ -4,7 +4,7 @@ package com.more9810.photogallery.data.remote.api.pexelsResponse
 import com.google.gson.annotations.SerializedName
 
 
-data class PhotoDto<T>(
+data class PhotoDto(
     @SerializedName("alt")
     val alt: String? = null,
     @SerializedName("avg_color")
@@ -22,9 +22,11 @@ data class PhotoDto<T>(
     @SerializedName("photographer_url")
     val photographerUrl: String? = null,
     @SerializedName("src")
-    val src: T? = null,
+    val src: Src? = null,
     @SerializedName("url")
     val url: String? = null,
     @SerializedName("width")
     val width: Int? = null
-)
+){
+
+}
