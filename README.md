@@ -65,16 +65,9 @@ The app supports **offline caching** with Room Database, **Light/Dark theme swit
 </table>
 
 ---
-
-## **Video Demo**
 ## **Video Demo**
 
-<video width="600" controls>
-  <source src="./screenshots/demo_video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-![Demo Video](./screenshots/demo_video.gif)
+[Watch Video](https://github.com/user-attachments/assets/9065622f-e8bf-426d-a93f-1cc1f49ef5d6)
 
 
 
