@@ -16,7 +16,8 @@
         android:theme="@style/Theme.PhotoGallery">
         <activity
             android:name=".presentation.ui.activity.SplashScreenActivity"
-            android:exported="true" >
+            android:exported="true"
+            android:theme="@style/Custom.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

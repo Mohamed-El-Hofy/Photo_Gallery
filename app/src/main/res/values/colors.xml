@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#202020</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <color name="color_logo_route">#023687</color>
+
+    <color name="colorPrimary">#FFFFFFFF</color>
+    <color name="colorOnPrimary">#202020</color>
+
+
     <color name="lightGray">#575757</color>
     <color name="green">#00C853</color>
     <color name="red">#D50000</color>
 
-    <color name="colorSplashColor">#023687</color>
 
 
 </resources>

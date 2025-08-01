@@ -49,4 +49,5 @@
     <string name="splash">splash</string>
     <string name="app_logo">app logo</string>
     <string name="night_mode">Night Mode</string>
+    <string name="try_again">Try Again</string>
 </resources>

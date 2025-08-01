@@ -36,7 +36,7 @@
             android:text="@string/supervised_by_mohamed_nabil"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/colorSplashColor"
+            android:textColor="@color/color_logo_route"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
