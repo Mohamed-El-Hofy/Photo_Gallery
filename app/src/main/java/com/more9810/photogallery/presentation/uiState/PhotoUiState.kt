@@ -10,4 +10,5 @@ data class PhotoUiState (
     val isNetConnect: Boolean = false,
     val isLoading: Boolean= false,
     val isSuccess: Boolean= false,
+    val splashScreenIsLoading: Boolean = true
 )

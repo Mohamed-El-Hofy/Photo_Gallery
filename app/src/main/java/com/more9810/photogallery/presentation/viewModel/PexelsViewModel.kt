@@ -18,7 +18,6 @@ class PexelsViewModel @Inject constructor(
     private val getNetworkStateUseCase: GetNetworkStateUseCase,
 ) : ViewModel() {
 
-
     private val _uiState = MutableStateFlow(PhotoUiState())
     val uiState get() = _uiState.asStateFlow()
 
@@ -28,7 +27,9 @@ class PexelsViewModel @Inject constructor(
     }
 
 
-    fun checkNet(){
+
+
+    fun checkNet() {
         viewModelScope.launch {
             getNetworkStateUseCase.invoke().collect {
                 _uiState.update { uiState ->
@@ -37,6 +38,7 @@ class PexelsViewModel @Inject constructor(
             }
         }
     }
+
     fun getPhoto() {
         viewModelScope.launch {
             fetchDataUseCase(70).collect { resource ->
@@ -46,7 +48,8 @@ class PexelsViewModel @Inject constructor(
             }
         }
     }
-    fun onClackTry(){
+
+    fun onClackTry() {
         getPhoto()
     }
 }
