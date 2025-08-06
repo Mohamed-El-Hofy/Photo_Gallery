@@ -1,6 +1,7 @@
 package com.more9810.photogallery.data.local.systemData
 
 import android.content.Context
+import android.util.Log
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.edit
 
@@ -13,6 +14,7 @@ object ThemeHelper {
     fun applyTheme(context: Context) {
         val mode = getSavedThemeMode(context)
         AppCompatDelegate.setDefaultNightMode(mode)
+
     }
 
     /** تبديل الوضع */

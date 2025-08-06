@@ -31,10 +31,8 @@ class PhotoRepositoryImpl @Inject constructor(
                 Log.e("TAG_Repo", "isConnect $isConnect", )
                 try {
                     val response = apiService.getPhotos()
-                    Log.e("TAG_Repo", "inside try", )
 
                     if (isConnect) {
-                        Log.e("TAG_Repo", "inside is Connect $isConnect", )
                         if (response.isSuccessful) {
                             Log.e("TAG_Repo", "inside response successful", )
 
@@ -42,18 +40,15 @@ class PhotoRepositoryImpl @Inject constructor(
                                 response.body()?.photoDto?.mapNotNull { it?.toPhotoEntity() }.orEmpty()
                             updateAndSavDataInRoom(photoDto)
                         } else {
-                            Log.e("TAG_Repo", "if response Exception", )
                             emit(Resource.Error(response.errorBody()?.string().toString()))
                             delay(5000)
                         }
                     } else {
-                        Log.e("TAG_Repo", "inside else Connect Exception", )
 
                         emit(Resource.Error(response.errorBody()?.string().toString()))
                         delay(5000)
                     }
                 }catch (e: Exception){
-                    Log.e("TAG_Repo", "inside catch", )
 
                     emit(Resource.Error(e.toString()))
                     delay(5000)
@@ -61,17 +56,14 @@ class PhotoRepositoryImpl @Inject constructor(
                     val localPhoto = loadFromDB().map { Resource.Success(it) }
                     if (!firstLocalPhoto?.data.isNullOrEmpty()) {
                         emit(firstLocalPhoto)
-                        Log.e("TAG_Repo", "firstOrNull() ${!firstLocalPhoto?.data.isNullOrEmpty()}", )
                         emitAll(localPhoto)
                     }
                 }
-                Log.e("TAG_Repo", "outside is connect", )
 
                 val firstLocalPhoto = loadFromDB().map { Resource.Success(it) }.firstOrNull()
                 val localPhoto = loadFromDB().map { Resource.Success(it) }
                 if (!firstLocalPhoto?.data.isNullOrEmpty()) {
                     emit(firstLocalPhoto)
-                    Log.e("TAG_Repo", "firstOrNull() ${!firstLocalPhoto?.data.isNullOrEmpty()}", )
                     emitAll(localPhoto)
                 }
             }

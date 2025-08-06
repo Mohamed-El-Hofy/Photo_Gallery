@@ -94,4 +94,6 @@ dependencies {
 
     //splash screen api
     implementation(libs.androidx.core.splashscreen)
+
+    implementation(libs.shimmer)
 }

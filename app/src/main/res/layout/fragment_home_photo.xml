@@ -69,7 +69,7 @@
                 android:textStyle="bold"
                 tools:text="ttttttttttttttttttttttttttttttttt" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/btnTryAgain"
                 style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_width="match_parent"
@@ -81,7 +81,7 @@
                 android:layout_marginTop="16dp"
                 android:onClick="@{()->viewModel.onClackTry()}"
                 android:text="@string/try_again"
-                android:textColor="?colorOnPrimary" />
+                android:textColor="@color/colorOnPrimary" />
         </LinearLayout>
 
         <ProgressBar

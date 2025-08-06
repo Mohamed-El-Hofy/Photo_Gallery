@@ -13,7 +13,6 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.more9810.photogallery.R
-import com.more9810.photogallery.data.local.systemData.ThemeHelper
 import com.more9810.photogallery.presentation.viewModel.ThemeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -22,7 +21,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class SplashScreenActivity : AppCompatActivity() {
     private val viewModel: ThemeViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
-        ThemeHelper.applyTheme(this)
+
         val splashScreen = installSplashScreen()
 
 

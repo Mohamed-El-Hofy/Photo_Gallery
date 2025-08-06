@@ -34,7 +34,7 @@ class HomePhotoFragment : Fragment() {
         binding.rvHom.layoutManager = layoutManager
 
         binding.viewModel = viewModel
-        binding.lifecycleOwner = this
+        binding.lifecycleOwner = viewLifecycleOwner
         adapter = PhotoRecyclerAdapter(emptyList())
         binding.rvHom.adapter = adapter
 
